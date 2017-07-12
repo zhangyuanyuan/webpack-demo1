@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div><%=htmlWebpackPlugin.options.dateData %></div>    
+<div>
+    <% include  template/header.html %>
+</div>
+<ul>  
+    <% var arr = [1,2,3,4,5] %>
+    <% for(var i = 0; i < arr.length; i++){ %>  
+        <li><%=arr[i] %></li>  
+    <% } %>  
+</ul>  
+<div>
+	<!-- 应用是需要 ejs-compiled-loader解析， 并且要相对于webpack配置文件的位置 -->
+    <% include  template/footer.html %>
+</div>
+</body>
+</html>
